@@ -1,0 +1,37 @@
+@import "variables/mixins";
+
+
+* {
+    font-family: 'Merienda';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    transition: 300ms all;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+
+@import '../components/basket/basket.scss';
+@import '../components/singleCoffe/singleCoffe.scss';
+@import 'blocks/spiner';
+@import "../components/productsTabs/producrsTabs.scss";
+@import "../components/productsDesrciption/description";
+@import "../components/promo/promo";
+@import '../components/header/header';
+@import "blocks/coffeDivider";
+@import "../components/about/about";
+@import "../components/best/best";
+@import "blocks/cards";
+@import "blocks/navigation";
+@import "../components/footer/footer";
+@import "blocks/forms";
+@import 'blocks/transitions';

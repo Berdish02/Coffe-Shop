@@ -1,0 +1,92 @@
+@import '../variables/mixins';
+
+.card {
+    width: 220px;
+    min-height: 240px;
+    background: rgba(255, 255, 255, 0.65);
+    border-radius: 8px;
+    margin-right: 71px;
+    padding: 22px 35px 22px 21px;
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+    &__img {
+        margin-bottom: 14px;
+        img{
+            width: 151px;
+            height: 130px;
+        }
+    } 
+    &__name {
+        display: block;
+        margin-bottom: 10px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+    }
+    &__price {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+        text-align: right;
+    }
+}
+
+.productItem {
+    transition: 500ms all;
+    cursor: pointer;
+    padding: 20px 25px 10px 25px;
+    background: #FFFFFF;
+    border-radius: 8px;
+    margin-bottom: 60px;
+    width: 220px;
+    min-height: 260px;
+    text-align: center;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+    &:nth-child(3n+2) {
+        margin-right: 70px;
+        margin-left: 70px;
+    }
+    &__imgWrapper {
+        height: 180px;
+        img {
+            height: 100%;
+        }
+    }
+    &__name {
+        display: block;
+        margin-top: 10px;
+        @include productText;
+        text-align: center;
+
+    }
+    &__country {
+        display: block;
+        margin-top: 5px;
+        @include productText;
+        text-align: center;
+
+    }
+    &__price {
+        display: block;
+        margin-top: 5px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+        color: #000000;
+    }
+    &:hover {
+        transform: scale(1.1);
+    }
+    &:active {
+        transform: translateY(1px);
+        filter: saturate(150%);
+    }
+}

@@ -1,0 +1,72 @@
+.listItem {
+    &-enter{ 
+        opacity: 1;
+        &-active {
+            opacity: 1;
+            transition: 700ms all;
+        }
+    }
+    &-exit {
+        opacity: 1;
+        transform: translateX(0);
+        &-active {
+            opacity: 0;
+            transition: 1000ms all;
+            transform: translateX(-800px);
+        }
+    }
+}
+
+.page{
+    &-enter {
+        opacity: 0;
+        transform: scale(1.1);
+        &-active {
+            opacity: 1;
+            transform: scale(1);
+            transition: opacity 700ms, transform 700ms;
+        }
+    }
+    &-exit {
+        opacity: 0;
+        &-active {
+            opacity: 0;
+            transition: opacity 700ms, transform 700ms;
+        }
+    }
+} 
+
+.logOut {
+    &-enter {
+        opacity: 0;
+        transform: scale(0.9);
+        &-active {
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 400ms, transform 400ms;
+        }
+    }
+    &-exit {
+        opacity: 1;
+        &-active {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 300ms, transform 300ms;
+        }
+    }
+}
+
+.modalTransition-enter{
+    opacity: 0;
+}
+.modalTransition-enter-active {
+    opacity: 1;
+    transition: all 0.5s;
+}
+.modalTransition-exit {
+    opacity: 1;
+}
+.modalTransition-exit-active{
+    opacity: 0;
+    transition: all 0.5s;
+}

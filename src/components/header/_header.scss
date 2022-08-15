@@ -1,0 +1,41 @@
+.header {
+    position: absolute;
+    padding-top: 30px;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    &-products {
+        background: url('../../resources/images/header_bg.jpg');
+        height: 260px;
+    }
+    .account {
+        margin-left: 5%;
+        min-width: 105px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 50px;
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        &__wrapper {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    h2 {
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-style: normal;
+        font-weight: 700;
+        font-size: 40px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+}

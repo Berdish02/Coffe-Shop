@@ -1,0 +1,14 @@
+@import '../../style/variables/mixins';
+
+.best {
+    height: 495px;
+    background: url('../../resources/images/best_bg.jpg');
+    padding-top: 80px;
+    padding-bottom: 110px;
+    text-align: center;
+    &__title {
+        @include subtitle;
+        display: block;
+        margin-bottom: 39px;
+    }
+}

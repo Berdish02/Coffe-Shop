@@ -1,0 +1,10 @@
+.basket {
+    width: 50px;
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+        &:active{
+            transform: translateY(2px);
+            filter: saturate(150%);
+        }
+}

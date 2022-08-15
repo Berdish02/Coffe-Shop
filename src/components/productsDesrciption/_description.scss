@@ -1,0 +1,39 @@
+.description {
+    padding-top: 308px;
+    &__content {
+        margin-top: 30px;
+        text-align: center;
+        h2 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 35px;
+
+            color: #000000;
+
+        }
+    }
+    &__img {
+        width: 272px;
+        height: 355px;
+        filter: drop-shadow(5px 5px 30px rgba(0, 0, 0, 0.25));
+        display: block;
+        margin: 0 auto;
+    }
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+
+    }
+    #line {
+        margin: 40px auto 0 auto;
+        width: 240px;
+        height: 0px;
+        border-bottom: 1px solid #000;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    }
+}

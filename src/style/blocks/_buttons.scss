@@ -1,0 +1,142 @@
+.button {
+    transition: 300ms all;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0 auto;
+    border: 1px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0);
+    width: 120px;
+    height: 30px;
+    margin-top: 15px;
+    &-nonDisplay {
+        display: none;
+    }
+    &:hover {
+        border-color:rgb(12, 95, 173);
+        color: rgb(12, 95, 173);
+        transform: scale(1.1);
+    }
+    &:active {
+        transform: translateY(1px);
+        filter: saturate(150%);
+    }
+    span {
+        font-size: 19px;
+    }
+    &-google {
+        margin-top: 11px;
+        width: 155px;
+        &:hover {
+            border-color: #FFFFFF;
+            color: #fff;
+        }
+    }
+    &-registration {
+        font-family: 'Merienda';
+        width: 73px;
+        height: 26px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 17px;
+    }
+    &-invisible {
+        font-family: 'Merienda';
+        border: none;
+        width: 73px;
+        height: 26px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 17px;
+    }
+    &-logout {
+        font-family: 'Merienda';
+        margin: 0 auto;
+        width: 100px;
+    }
+    &-tabs {
+        font-family: 'Merienda';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        text-align: center;
+        color: #000;
+        border-radius: 0;
+        margin: 0;
+        width: 75px;
+        height: 30px;
+        background: #FFFFFF;
+        box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+        &:nth-child(1) {
+            border-radius: 4px 0 0 4px;
+            margin-left: 10px;
+        }
+        &:nth-child(2) {
+            margin: 0 5px 0 5px;
+        }
+        &:nth-child(3) {
+            margin-right:5px;
+        }
+        &:nth-child(4) {
+            border-radius: 0 4px 4px 0;
+        }
+        &:hover {
+            border:none;
+            color: #000;
+            transform: scale(1.1);
+        }
+    }
+    &-load {
+        display: block;
+        margin-top: 0;
+        margin: 0 auto;
+        color:#000;
+        font-family: 'Merienda';
+        width: 73px;
+        height: 26px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 17px;
+        border-color: #000;
+
+    }
+    &-single {
+        margin-right: 100%;
+        width: 127px;
+        height: 30px;
+        border: 1px solid #000000;
+        font-family: 'Merienda';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+    }
+    &-checkout {
+        color:#000;
+        border-color:#000;
+        margin: 0 10px 0 10px;
+    }
+    &-active {
+        transform: scale(1.05);
+        box-shadow: 4px 4px 20px rgba(13, 121, 141, 0.7);
+
+    }
+}
+
+#login, #signin {
+    &:hover {
+        border-color: #FFFFFF;
+        color: #fff;
+    }
+}

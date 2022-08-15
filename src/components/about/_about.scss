@@ -1,0 +1,21 @@
+@import "../../style/variables/mixins";
+
+.about {
+    height: 520px;
+    text-align: center;
+    padding-top: 80px ;
+    padding-bottom: 101px;
+    &__title {
+        @include subtitle
+    }
+    &__text {
+        width: 589px;
+        margin: 0 auto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+    }
+}
