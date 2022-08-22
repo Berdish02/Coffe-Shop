@@ -21,10 +21,10 @@ const Product = ({modalVision}) => {
     return(
         <>
             <Provider value={api}>
-                <Header vision={{setRegistrVison, setLoginVision, setBasketVision}}/>
+                <Header vision={{setRegistrVison, setLoginVision, setBasketVision, basketData}}/>
                 {(registrVision) ? <Registration nonVision={setRegistrVison}/> : null}
                 {(loginVision) ? <Login nonVision={setLoginVision}/> : null}
-                {(basketVision) ? <BasketModal props={{setBasketVision, basketData, setBasketData}}/> : null}
+                <BasketModal props={{setBasketVision,basketVision, basketData, setBasketData}}/>
                 <Description/>
                 <Catalog/>
             </Provider>

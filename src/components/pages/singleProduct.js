@@ -3,7 +3,6 @@ import Header from "../header/header";
 import Footer from "../footer/footer";
 import Registration from "../forms/registration";
 import Login from "../forms/signIn";
-import { CSSTransition } from "react-transition-group";
 import BasketModal from "../forms/basketModal";
 import SingleCoffe from "../singleCoffe/singleCoffe";
 import { firebaseContext, api } from "../service/context";
@@ -21,7 +20,7 @@ const SinglePage = ({modalVision}) => {
     return (
         <>
             <Provider value={api}>
-                <Header vision={{setRegistrVison, setLoginVision, setBasketVision}}/>
+                <Header vision={{setRegistrVison, setLoginVision, setBasketVision, basketData}}/>
                     {(registrVision) ? <Registration nonVision={setRegistrVison}/> : null}
                     {(loginVision) ? <Login nonVision={setLoginVision}/> : null}
                     <BasketModal props={{setBasketVision,basketVision, basketData, setBasketData}}/>

@@ -8,8 +8,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 
 const SingleCoffe = ({props}) => {
-    const [data, setData] = useState([]),
-          [loading, setLoading] = useState(false),
+    const [loading, setLoading] = useState(false),
           [vision, setVision] = useState([]);
     const {getProductById} = dataBaseRequests();
     const {productId} = useParams();
@@ -24,15 +23,14 @@ const SingleCoffe = ({props}) => {
     }, [productId])
 
     const onSetBasketData = (data) => {
-        const arr = {name: data.name, price:data.price, src: data.src, id: data.id}
-        setBasketData([...basketData, arr])
+        const arr = {name: data.name, price:data.price, src: data.src, id: data.id};
+        setBasketData([...basketData, arr]);
     }
 
     const onGetProduct = async() => {
         setLoading(true);
         await getProductById(productId)
         .then(prom => {
-            setData([...prom]);
             setLoading(false);
             setVision(descriptionCreator(prom[0], coffeBlack, onSetBasketData))  
         })

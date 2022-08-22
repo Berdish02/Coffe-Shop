@@ -7,6 +7,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 
 const Catalog = () => {
     const [cardsInfo, setCardsInfo] = useState([]),
+          [currentInfo, setCurrentInfo] = useState([]),
           [visibleCards, setVisibleCards] = useState(false),
           [offset, setOffset] = useState(0),
           [buttonVision, setButtonVision] = useState(false),
@@ -17,13 +18,12 @@ const Catalog = () => {
     const {getAllProducts, getProductsByCountry} = dataBaseRequests();
 
     useEffect(() => {
-        console.log('first render')
         onGetHeroes();
     }, []);
     
     useEffect(() => {
-            setVisibleCards(cardsInfo.map((item,i) => tabCreator(item.src, item.name, item.country, item.price, item.id)));
-    },[cardsInfo]);
+            setVisibleCards(cardsInfo.map((item) => tabCreator(item.src, item.name, item.country, item.price, item.id)));
+    },[cardsInfo, currentInfo]);
 
     const onGetHeroes = () => {
         setLoading(true);
@@ -37,6 +37,7 @@ const Catalog = () => {
                 setButtonVision(false);
             }
             setCardsInfo([...cardsInfo, ...prom]);
+            setCurrentInfo([...cardsInfo, ...prom]);
         })
         .catch((error) => {
             console.log(error);
@@ -49,6 +50,7 @@ const Catalog = () => {
             setOffset(6);
             setButtonVision(true);
             setCardsInfo(prom);
+            setCurrentInfo(prom);
         })
         .catch((error) => {
             console.log(error);
@@ -58,6 +60,7 @@ const Catalog = () => {
     const onGetTab = (country, active) => {
         setActiveTab(active);
         setOffset(0);
+        setInputValue('')
         getProductsByCountry(country)
         .then(prom => {
             if(prom.length === 6) {
@@ -66,6 +69,7 @@ const Catalog = () => {
                 setButtonVision(false);
             }
             setCardsInfo(prom);
+            setCurrentInfo(prom);
         })
         .catch((error) => {
             console.log(error);
@@ -74,12 +78,11 @@ const Catalog = () => {
 
 
     const onChangeInput = (e) => {
-        e.preventDefault();
-        const target = e.target;
-        setInputValue(target.value);
-        const arr = visibleCards.filter(item => item.name.indexOf(target.value) > 0)
+        const target = e.target.value;
+        setInputValue(target);
+        const arr = currentInfo.filter(item  => item.name.indexOf(target) > -1);
         console.log(arr);
-
+        setCardsInfo(arr);
     };
 
     return(

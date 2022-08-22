@@ -14,7 +14,7 @@ import userIcon from '../../resources/icons/userIcon.png';
 const Header = ({vision}) => {
     const [logoutVision, setLogoutVision] = useState(false)
     const {useAuthState, auth, signOut} = useContext(firebaseContext);
-    const {setLoginVision, setRegistrVison, setBasketVision} = vision;
+    const {setLoginVision, setRegistrVison, setBasketVision, basketData} = vision;
     const [user] = useAuthState(auth);
     const location = useLocation();
     const activeLink = {
@@ -60,7 +60,7 @@ const Header = ({vision}) => {
                                 <button className='button button-logout' onClick={logout}>Log out</button>
                             </CSSTransition>
                         </div>
-                        {(location.pathname !== '/' && user !==null) ? <Basket nonVision={{setBasketVision}}/> : null}
+                        {(location.pathname !== '/' && user !==null) ? <Basket nonVision={{setBasketVision, basketData}}/> : null}
                     </div>
                 </Col>
             </Row>

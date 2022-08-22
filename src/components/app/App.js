@@ -1,6 +1,6 @@
 import React  from 'react';
 import { useState } from 'react';
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {Routes, Route} from 'react-router-dom';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { useLocation} from 'react-router-dom';
 import Main from '../pages/mainPage';
